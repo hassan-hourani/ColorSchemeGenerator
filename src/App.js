@@ -21,6 +21,9 @@ function App() {
       setModeState(document.getElementById("select").value)
     )
   }
+  function copyToClipboard(e) {
+    navigator.clipboard.writeText(document.getElementById(`hv${e}`).innerText)
+  };
   return (
     <>
       <div className="header">
@@ -44,25 +47,13 @@ function App() {
         <div id="bgc4" className="fifth"></div>
       </div>
       <div className="footer">
-        <p id="hv0"></p>
-        <p id="hv1"></p>
-        <p id="hv2"></p>
-        <p id="hv3"></p>
-        <p id="hv4"></p>
+        <p onClick={(e) => copyToClipboard(0)} id="hv0"></p>
+        <p onClick={(e) => copyToClipboard(1)} id="hv1"></p>
+        <p onClick={(e) => copyToClipboard(2)} id="hv2"></p>
+        <p onClick={(e) => copyToClipboard(3)} id="hv3"></p>
+        <p onClick={(e) => copyToClipboard(4)} id="hv4"></p>
       </div>
     </>
   )
 }
 export default App;
-//    function handelChange() {
-//     let hex = document.getElementById("color").value.substring(1)
-//     let mode = document.getElementById("select").value
-//     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${mode}&count=5`)
-//     .then(res => res.json())
-//     .then(data => {
-//       for (let i = 0; i<5; i++){
-//         document.getElementById(`bgc${[i]}`).style.backgroundColor = `${data.colors[i].hex.value}`;
-//         document.getElementById(`hv${i}`).innerHTML = data.colors[i].hex.value
-//       }
-//     })
-// }
