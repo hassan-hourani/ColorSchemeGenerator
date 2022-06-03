@@ -65,6 +65,7 @@ button {
 
 .footer p {
   margin: 0;
+  cursor: pointer;
 }
 
 .first {
