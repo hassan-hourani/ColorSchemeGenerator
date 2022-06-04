@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inter, Helvetica, sans-serif;
+  
 }
 
 .header {
@@ -36,6 +37,9 @@ select {
   padding: 0.5rem 0.3rem;
   cursor: pointer;
 }
+select option {
+  font-weight: 400;
+}
 
 button {
   background-color: #3D4B60;
@@ -43,6 +47,7 @@ button {
   padding: 0.5rem 1.25rem;
   border: none;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 .main {
@@ -66,6 +71,7 @@ button {
 .footer p {
   margin: 0;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .first {
